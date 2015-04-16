@@ -1,0 +1,256 @@
+@import "settings";
+@import "../bower_components/animate-sass/animate";
+
+//Generics
+@import "mixins";
+
+//Fonts
+@font-face {
+  font-family: 'Macb';
+  font-style: normal;
+  font-weight: 400;
+  src: url(http://fonts.gstatic.com/s/josefinsans/v9/xgzbb53t8j-Mo-vYa23n5pS3E-kSBmtLoNJPDtbj2Pk.ttf);
+  }
+
+//Global
+body {
+	&.intro {
+		transition: background-image 1s ease-in-out;
+		@include background(cover,"../img/crowning.jpg",fixed);
+		
+		#previous,#next {
+			margin-top: rem-calc(50px);
+			cursor: hand;
+		}
+	}
+	
+	&.secondary {
+		transition: background-image 1s ease-in-out;
+		@include background(cover,"../img/crowning.jpg",fixed);
+		
+		#previous,#next {
+			margin-top: rem-calc(110px);
+			cursor: hand;
+		}
+	}
+	
+	&.tertiary {
+		transition: background-image 1s ease-in-out;
+		@include background(cover,"../img/castle.jpg",fixed);
+		
+		#previous,#next {
+			margin-top: rem-calc(110px);
+		}
+	}
+	
+	&.quaternary {
+		transition: background-image 1s ease-in-out;
+		@include background(cover,"../img/background.jpg",fixed);
+		
+		#previous,#next {
+			margin-top: rem-calc(110px);
+		}
+	}
+	
+	&.quinary {
+		transition: background-image 1s ease-in-out;
+		@include background(cover,"../img/background.jpg",fixed);
+		
+		#previous,#next {
+			margin-top: rem-calc(110px);
+		}
+	}
+	
+	&.senary {
+		transition: background-image 1s ease-in-out;
+		@include background(cover,"../img/background.jpg",fixed);
+		
+		#previous,#next {
+			margin-top: rem-calc(110px);
+		}
+	}
+	
+	&.septenary {
+		transition: background-image 1s ease-in-out;
+		@include background(cover,"../img/background.jpg",fixed);
+		
+		#previous,#next {
+			margin-top: rem-calc(110px);
+		}
+	}
+	
+	&.octonary {
+		transition: background-image 1s ease-in-out;
+		@include background(cover,"../img/background.jpg",fixed);
+		
+		#previous,#next {
+			margin-top: rem-calc(110px);
+		}
+	}
+	
+	&.nonary {
+		transition: background-image 1s ease-in-out;
+		@include background(cover,"../img/background.jpg",fixed);
+		
+		#previous,#next {
+			margin-top: rem-calc(110px);
+		}
+	}
+	
+	&.denary {
+		transition: background-image 1s ease-in-out;
+		@include background(cover,"../img/castle.jpg",fixed);
+		
+		#previous,#next,#home {
+			margin-top: rem-calc(110px);
+		}
+	}
+}
+
+h1 {
+    font-size: 36px;
+    font-family: Macb;
+}
+
+h2 {
+	font-size: 15px;
+	font-family: Merriweather;
+    text-align:center;
+}
+
+p {
+    font-size: 14px;
+    font-family: Inconsolata;
+    
+    &.quote {
+		text-align: right;
+		font-size: 19px;
+		font-family: Macb;
+	}
+}
+
+a {
+    text-decoration: none;
+}
+
+.quoted {
+    border-radius:5px;
+    margin: 0 auto;
+    padding: 15px;
+    font-family: Macb;
+    color: ghostwhite;
+    font-size: 19px;
+    border: 2px black;
+    background-color:rgba(0,0,215,0.7);   
+}
+
+.linked  {
+    border-radius:5px;
+    margin: 0 auto;
+    width: 150px;
+    border: 2px black;
+    background-color:rgba(15,15,15,0.7);
+    color:$smoke;
+}
+
+//Content
+
+.container {
+	.contentTitle  {
+		margin-left: 25%;
+		margin-top: 10%;
+		padding-top: rem-calc(15px);
+		border-radius: rem-calc(5px);
+		background-color: rgba($white,0.6);
+		width: rem-calc(500px);
+		height: rem-calc(100px);
+		text-align: center;
+		display: inline-block;
+		
+		h1 {
+			vertical-align: middle;
+			display: inline-block;
+		}
+	}
+	
+	.endTitle {
+		margin: 15% auto;
+		border-radius: 5px;
+		background: rgba(255,255,255,0.8);
+		padding: 25px 15px;
+		width: 650px;
+		text-align: center;
+	}
+	
+	.header  {
+		margin-left:50%;
+		margin-right:auto;
+		margin-top:5%;
+		margin-bottom:auto;
+		border-radius: 5px;
+		background: rgba(175,175,175,0.8);
+		border: 3px solid #000000;
+		width: 200px;
+		text-align: center;
+	}
+	
+	.content  {
+		margin-left:50%;
+		margin-right:auto;
+		margin-top:2%;
+		margin-bottom:auto;
+		width:40%;
+		border-radius: 5px;
+		background-color: rgba(255,255,255,0.8);
+		padding: 25px 45px;
+	}
+}
+
+img {
+	position: fixed;
+	left:2%;
+	right:auto;
+	top:18%;
+	bottom:auto;
+	border: rem-calc(7px) solid gray;
+}
+
+//Navigation
+#previous,#next,#home {
+	@extend .size-60;
+    position: fixed;
+}
+
+
+//Authors
+.tom  {
+    color:white;
+    padding:5px;
+    border-radius:5px;
+    float:left;
+    width: 150px;
+    border: 2px black;
+    background-color:rgba(15,15,15,0.7);
+}
+
+.sofus  {
+    color:white;
+    padding:5px;
+    border-radius:5px;
+    float:right;
+    width: 150px;
+    border: 2px black;
+    background-color:rgba(15,15,15,0.7);
+}
+
+//Font/Icon Sizes.
+.size-12 { font-size: rem-calc(12px); }
+.size-14 { font-size: rem-calc(14px); }
+.size-16 { font-size: rem-calc(16px); }
+.size-18 { font-size: rem-calc(18px); }
+.size-21 { font-size: rem-calc(21px); }
+.size-24 { font-size: rem-calc(24px); }
+.size-36 { font-size: rem-calc(36px); }
+.size-48 { font-size: rem-calc(48px); }
+.size-60 { font-size: rem-calc(60px); }
+.size-72 { font-size: rem-calc(72px); }
